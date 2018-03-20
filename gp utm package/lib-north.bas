@@ -1,0 +1,11 @@
+
+'#sec:Main
+SUB NORTHPT(x,y)
+  LINE x,y STEP 0,13 COLOR 7
+  LINE x,y STEP -2,3 COLOR 7
+  LINE x,y STEP 2,3 COLOR 7
+  LINE x - 2,y + 5 STEP 0,6 COLOR 7
+  LINE x - 2,y + 5 STEP 4,6 COLOR 7
+  LINE x + 2,y + 5 STEP 0,6 COLOR 7
+END
+'

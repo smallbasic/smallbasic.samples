@@ -1,0 +1,4 @@
+'no window setup for SmallBASIC 2015-09-09 MGA/B+
+circle xmax/2,ymax/2, 200,1,9 filled
+rect 0,ymax/2-10 step xmax,20,12 filled
+plot -3.14,3.14,use sin(x)
