@@ -1,10 +1,12 @@
 rem https://en.wikipedia.org/wiki/L-system
 const fg_col = rgb(154, 170, 53)
 const bg_col = rgb(238, 241, 221)
+color fg_col, bg_col
 
 sub draw_turtle(script, x, y, stem, turn, angle)
-  local a, stack, i, idx, x2, y2
+  local a, stack, i, idx, x2, y2, col
   dim stack
+  cls
   for i = 0 to len(script)
     select case mid(script, i, 1)
     case "F", "1", "0" ' draw forward from current position 
@@ -26,6 +28,7 @@ sub draw_turtle(script, x, y, stem, turn, angle)
       delete stack, idx, 1
     end select
   next i
+  showpage
 end
 
 func create_lsystem(byref rules, byref variables, maxDepth, s, depth)
@@ -53,24 +56,16 @@ sub show_plant
   local maxDepth = 6
   local rules = {"X" : "F+[[X]-X]-F[-FX]+X", "F" : "FF"}
   local variables = ["X", "F"]
-  local angle = 35
-  local stem = 4
+  local stem = 3
   local script = create_lsystem(rules, variables, maxDepth, "X", 0)
+  local a = 35
 
-  for j = 0 to 10
-    cls
-    draw_turtle(script, x, y, stem, 20, 90)
-    showpage
-    delay(100)
-    cls
-    draw_turtle(script, x, y, stem, 36, 90)
-    showpage
-    delay(100)
-    cls
-    draw_turtle(script, x, y, stem, 39, 90)
-    showpage
-    delay(100)
-  next j
+  draw_turtle(script, x, y, stem, 35, 90)
+  delay(1200)
+  for a = 35 to 80 step 1
+    draw_turtle(script, x, y, stem, 45-a, 90)
+    delay(20)
+  next a
 end
 
 sub show_tree
@@ -80,14 +75,15 @@ sub show_tree
   local rules = {"1":"11", "0":"1[-0]+0"}
   local variables = ["1", "0"]
   local angle = 70
-  local stem = 4
-
-  local script = create_lsystem(rules, variables, maxDepth, "0", 0)
-  draw_turtle(script, x, y, stem, angle, 90)
+  local stem = 2
+  for d = 2 to 8
+    local script = create_lsystem(rules, variables, d, "0", 0)
+    draw_turtle(script, x, y, stem, angle, 90)
+    delay(120)
+  next d
 end
 
-color fg_col, bg_col
-cls
-'show_plant
-show_tree
-? "ok"
+'show_tree
+'delay(1000)
+show_plant
+pause
