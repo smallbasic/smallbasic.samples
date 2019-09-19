@@ -18,6 +18,7 @@ print cat(3) + "SmallBASIC featured samples" + cat(0)
 dim frm
 frm.inputs << bn("5000", "[Android] Stopit")
 frm.inputs << bn("5001", "[Android] Silly words")
+frm.inputs << bn("5004", "[Android] Circle slider")
 frm.inputs << bn("1407", "3d rotating cube with message [harixxx]") 'nice one harixxx!
 frm.inputs << bn("1613", "NIM [jsalai]")
 frm.inputs << bn("1409", "Mastermind [MGA & Johnno]")
