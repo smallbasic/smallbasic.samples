@@ -1,10 +1,7 @@
 
-const Xmax = 640
-const Ymax = 480
 const Xmid = Xmax/2
 const Ymid = Ymax/2
 const Lens = 256
-const PI = 3.141593
 const rings = 14
 const bands = 15
 const ringradius = 100
