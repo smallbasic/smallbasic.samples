@@ -66,7 +66,6 @@ dim b(22)
 dim e(22)
 local p, q, p1, q1, r0, r1, v0, v1, s0, s1, d0, d1, d2, s, t
 local m1, n1, k, i, h, j
-local const cero = 1e-19
 
 rem branch for special treatment of 1st and 2nd degree equations
 if n<=2 then 
