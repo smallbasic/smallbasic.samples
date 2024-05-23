@@ -1,6 +1,4 @@
 
-env("TURBO=1")
-env("TITLE=Clock")
 color 0, 15
 cls
 
@@ -63,11 +61,11 @@ while 1
 
     if ucase(inkey)="Q" then exit
     
+    showpage
+    
     while start - timer = 0: wend
 
-    draw_arrow sa, sr, 15
-    draw_arrow ma, mr, 15
-    draw_arrow ha, hr, 15
+    circle cx, cy,  sr color 15 filled
 wend
 end
 

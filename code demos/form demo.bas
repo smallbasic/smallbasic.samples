@@ -5,14 +5,14 @@ f.handleKeys = 0
 ' create some buttons
 button1.y = 120
 button1.label = "Button1"
-button1.value = "valudofButton1"
+button1.value = "valueOfButton1"
 button1.backgroundcolor = rgb(255,0,0)
-button1.onclick = HelloWorld 'this prints on load
+button1.onclick = @HelloWorld 'callback function
 button2.x = -1
 button2.y = 120
 button2.label = "Button2"
-button2.value = "valueofButton2"
-button3.type = "image"
+button2.value = "valueOfButton2"
+button3.type = "button"
 button3.value = "cats"
 button3.x = -1
 button3.y = 120
@@ -62,7 +62,7 @@ while 1
   if len(in$)>1 then
     flag= asc(left(in$,1))
     keychar =right(in$,1)
-  n= asc(keychar)
+    n= asc(keychar)
     if (flag == 1)
       ? "Ctrl    : ";keychar ; "   "
     else if (flag == 2)
@@ -81,15 +81,17 @@ while 1
     else
       ? " key=           "; in$; " "; vkey
     endif
-endif
+  endif
 
-if b6.value <> "cats" then ? b6.value
+  if b6.value <> "cats" then ? b6.value
+  
   if (len(f.value) > 0) then
     print f.value; "                  "
-  end if
+  endif
+  
 wend
 f.close()
 
 func HelloWorld
-? "hello world"
+  ? "hello world"
 end

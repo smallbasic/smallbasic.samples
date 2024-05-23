@@ -252,6 +252,7 @@ sub play_game
     next y
     x1 += size+gap
   next x
+  cls
 end
 
 init

@@ -1,5 +1,3 @@
-#sec:Main
-
 CONST s$=CHR$(27)+"[90m"
 CONST n$=CAT(0)
 REPEAT
@@ -35,7 +33,6 @@ REPEAT
   ELSE
     f$=f$+s$+str$(p)+n$
   ENDIF
-PRINT f$
+  PRINT f$
 UNTIL
 END
-

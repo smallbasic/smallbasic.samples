@@ -1,3 +1,4 @@
+' This program runs only on a Palm. 
 
 '#sec:Main
 '' loancalc.bas
@@ -24,6 +25,7 @@
 '' misuse. 
 ''
 '' InitVariables
+
 devel=0:oldx=0:oldy=0:dp=0:pr=0:ar=0
 pmts=0:mopmt=0:intpd=0:totpb=0
 actual=0
