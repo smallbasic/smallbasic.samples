@@ -6,7 +6,7 @@ if yr=0 then 99
 if yr<1900 or yr>2099 then 89
 tb=225-11*(yr%19)
 td=(tb-21)%30+21
-te=(yr+yr\\4+td+1)%7
+te=(yr+yr\4+td+1)%7
 day=td+7-te
 if day<32 then
  ? "Sunday, March ";day;", ";yr
