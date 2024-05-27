@@ -10,10 +10,10 @@ Until
 
 Sub EasterDate (Byref d, Byref m, y)
 
-   FirstDig = y \\ 100
+   FirstDig = y \ 100
    Remain19 = y Mod 19
 
-   temp = (FirstDig - 15) \\ 2 + 202 - 11 * Remain19
+   temp = (FirstDig - 15) \ 2 + 202 - 11 * Remain19
    If FirstDig > 26 Then temp = temp - 1
    If FirstDig > 38 Then temp = temp - 1
    
@@ -32,7 +32,7 @@ Sub EasterDate (Byref d, Byref m, y)
    If tC > 1 Then tC = tC + 1
         
    temp = y Mod 100
-   tD = (temp + temp \\ 4) Mod 7
+   tD = (temp + temp \ 4) Mod 7
     
    tE = ((20 - tB - tC - tD) Mod 7) + 1
    d = tA + tE
