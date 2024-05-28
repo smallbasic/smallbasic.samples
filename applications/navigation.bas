@@ -1,5 +1,5 @@
-
-'#sec:Main
+w = window()
+w.setfont(8,"px",0,0)
 
 '' form.bas
 ''''27/02/2002
@@ -19,7 +19,7 @@ tons=-1
 toew=-1
 kmtoggle= 1
 kmnm="NM"
-def omod(a,b)=a-b*(a\\b)
+def omod(a,b)=a-b*(a\b)
 
 gosub screen
 

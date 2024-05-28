@@ -8,9 +8,11 @@ for i=0 to 7
   drwbtn 100,60*i+10,"Button #"+str(i+1)
 next
 
+pen on
+
 while 1
   btn=0:mx=0:my=0
-  pen on
+  
   repeat
     if pen(3) then
       mx=pen(4):my=pen(5)
@@ -23,12 +25,14 @@ while 1
         next
       end if
     end if
-  until btn<>0
-  pen off
-  delay 160  '<================= this needed to be increased
+    showpage
+    delay(20)
+  until btn<>0  
   at 500,100:?spc(50)
   at 500,100:? "You pressed button "+btn
 wend
+
+pen off
 
 sub drwbtn(x,y,s)
   local th,tw,gray,xoff,yoff

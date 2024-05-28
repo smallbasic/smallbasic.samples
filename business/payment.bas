@@ -16,7 +16,7 @@
   local pago, capi, Tinte, Tbal, Total
   local loan,  NroPayments, AnnualInteresRate
   local MonthInteresRate, bal, pmt
-  local	k;
+  local	k
 
   OPEN "memo:Amortization" FOR OUTPUT AS #1
  

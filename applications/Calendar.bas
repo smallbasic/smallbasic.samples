@@ -1,10 +1,6 @@
-#sec:Main
-'
-'	Calendar (PalmOS version)
-'
-const box=18
-const lmar=80-box*7/2
-const tmar=34
+const box=txth("Q") * 2
+const lmar=20
+const tmar=100
 dim ds(0 to 6),ms(12,2)
 for i=0 to 6 : read ds(i) : next
 data "Su","Mo","Tu","We","Th","Fr","Sa"
@@ -13,7 +9,7 @@ next : next
 data "January","February","March","April","May","June","July","August","September","October","November","December"
 data 31,28,31,30,31,30,31,31,30,31,30,31
 repeat
-  at 3,148
+  locate 0,0
   input "Month,Year? ",ln$
   cls
   if ln$=0 then stop

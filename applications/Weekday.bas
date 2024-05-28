@@ -13,7 +13,7 @@ y=val(v(2))
 ?"Today is ";
 goto 11
 10 rem
-input "Date ?  ",ln$
+input "Date (M/D/Y)?  ",ln$
 if ln$=0 then stop
 split ln$,"/,",v
 if ubound(v)>1 then if len(v(2)) then y=val(v(2))
